@@ -20,6 +20,7 @@ module SessionsHelper
     @current_user ||= User.find_by(remember_token: remember_token)
   end
 
+<<<<<<< HEAD
   def current_user?(user)
     user == current_user
   end
@@ -31,12 +32,15 @@ module SessionsHelper
     end
   end
 
+=======
+>>>>>>> d2660275cf4a5feb2bf84fe454f49ecad7dd918c
   def sign_out
     current_user.update_attribute(:remember_token,
                                   User.encrypt(User.new_remember_token))
     cookies.delete(:remember_token)
     self.current_user = nil
   end 
+<<<<<<< HEAD
 
   def redirect_back_or(default)
     redirect_to(session[:return_to] || default)
@@ -46,4 +50,6 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.url if request.get?
   end
+=======
+>>>>>>> d2660275cf4a5feb2bf84fe454f49ecad7dd918c
 end

@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20181016133328) do
 
   create_table "microposts", force: :cascade do |t|
@@ -29,6 +30,9 @@ ActiveRecord::Schema.define(version: 20181016133328) do
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
     t.index [nil, "followed_id"], name: "index_relationships_on_folloswer_id_and_followed_id", unique: true
   end
+=======
+ActiveRecord::Schema.define(version: 20180813120753) do
+>>>>>>> d2660275cf4a5feb2bf84fe454f49ecad7dd918c
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -37,7 +41,10 @@ ActiveRecord::Schema.define(version: 20181016133328) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "remember_token"
+<<<<<<< HEAD
     t.boolean "admin", default: false
+=======
+>>>>>>> d2660275cf4a5feb2bf84fe454f49ecad7dd918c
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :users do 
     member do
       get :following, :followers
@@ -7,6 +8,10 @@ Rails.application.routes.draw do
   resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts,    only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+=======
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+>>>>>>> d2660275cf4a5feb2bf84fe454f49ecad7dd918c
   root 'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
